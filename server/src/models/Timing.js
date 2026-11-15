@@ -23,3 +23,4 @@ const timingSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model('Timing', timingSchema);
+

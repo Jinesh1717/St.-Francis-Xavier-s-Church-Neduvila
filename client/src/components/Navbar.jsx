@@ -36,12 +36,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Brand Logo & Name */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-11 h-11 rounded-full bg-skyblue-100/90 flex items-center justify-center text-gold-600 shadow-sm border border-gold-200 group-hover:scale-105 transition-transform backdrop-blur-xs">
-              {/* Elegant Christian Cross SVG */}
-              <svg className="w-6 h-6 fill-current text-gold-600" viewBox="0 0 24 24">
-                <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7V2z" />
-              </svg>
-            </div>
+            <img
+              src="/logo.png"
+              alt="St. Francis Xavier Logo"
+              className="w-12 h-12 rounded-full object-cover shadow-sm border-2 border-gold-400 group-hover:scale-105 transition-transform"
+            />
             <div>
               <span className="block font-serif-church font-bold text-lg sm:text-xl text-slate-900 leading-tight">
                 St. Francis Xavier's Church

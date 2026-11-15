@@ -74,10 +74,12 @@ const AdminLogin = () => {
       <div className="w-full max-w-md glass-panel rounded-3xl p-8 sm:p-10 border border-white/80 shadow-glass-lg space-y-6 animate-fadeIn">
         {/* Church Header */}
         <div className="text-center space-y-2">
-          <div className="w-14 h-14 mx-auto rounded-full bg-skyblue-100/80 flex items-center justify-center text-gold-600 border border-gold-200 shadow-sm mb-3 backdrop-blur-xs">
-            <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
-              <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7V2z" />
-            </svg>
+          <div className="w-20 h-20 mx-auto rounded-full p-1 bg-white shadow-sm border border-gold-300 ring-4 ring-gold-100 mb-3 overflow-hidden">
+            <img
+              src="/logo.png"
+              alt="St. Francis Xavier Logo"
+              className="w-full h-full rounded-full object-cover"
+            />
           </div>
           <h1 className="font-serif-church font-bold text-2xl text-slate-900 leading-snug">
             St. Francis Xavier's Church

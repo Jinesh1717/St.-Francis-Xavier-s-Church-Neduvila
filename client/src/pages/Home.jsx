@@ -65,11 +65,13 @@ const Home = () => {
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-skyblue-200/40 blur-3xl pointer-events-none" />
 
         <div className="relative max-w-4xl mx-auto space-y-6">
-          {/* Soft Gold Cross Icon SVG */}
-          <div className="w-16 h-16 mx-auto rounded-full bg-white/80 flex items-center justify-center text-gold-600 shadow-sm border border-gold-300/80 backdrop-blur-xs">
-            <svg className="w-9 h-9 fill-current text-gold-600" viewBox="0 0 24 24">
-              <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7V2z" />
-            </svg>
+          {/* Church Patron Saint Logo / Emblem */}
+          <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full p-1 bg-white/90 shadow-glass border-2 border-gold-400/80 backdrop-blur-xs flex items-center justify-center ring-4 ring-gold-200/50 overflow-hidden">
+            <img
+              src={CHURCH_CONFIG.logo || '/logo.png'}
+              alt="St. Francis Xavier Logo"
+              className="w-full h-full rounded-full object-cover"
+            />
           </div>
 
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/80 border border-gold-300/80 shadow-2xs text-xs sm:text-sm text-gold-800 font-semibold backdrop-blur-xs">

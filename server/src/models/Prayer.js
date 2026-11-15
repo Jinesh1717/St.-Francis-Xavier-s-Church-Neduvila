@@ -49,3 +49,4 @@ const prayerSchema = new mongoose.Schema(
 prayerSchema.index({ type: 1, order: 1 });
 
 module.exports = mongoose.model('Prayer', prayerSchema);
+

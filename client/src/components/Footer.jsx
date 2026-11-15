@@ -10,12 +10,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Column 1: Parish Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-3">
-              <div className="w-8 h-8 rounded-full bg-skyblue-100 flex items-center justify-center text-gold-600">
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7V2z" />
-                </svg>
-              </div>
+            <div className="flex items-center space-x-3 mb-3">
+              <img
+                src="/logo.png"
+                alt="St. Francis Xavier Logo"
+                className="w-11 h-11 rounded-full object-cover shadow-sm border border-gold-400"
+              />
               <h3 className="font-heading font-semibold text-lg text-slate-900">
                 St. Francis Xavier's Church
               </h3>

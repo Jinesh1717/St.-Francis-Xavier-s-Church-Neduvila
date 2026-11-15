@@ -7,8 +7,9 @@ export const CHURCH_CONFIG = {
   name: "St. Francis Xavier's Roman Catholic Church",
   nameShort: "St. Francis Xavier's Church",
   nameMalayalam: "വിശുദ്ധ ഫ്രാൻസിസ് സേവ്യർ ദൈവാലയം, നെടുവില",
-  parish: "Neduvila Parish",
-  archdiocese: "Archdiocese of Changanacherry",
+  parish: "Neduvila Parish (നെടുവിള ഇടവക)",
+  archdiocese: "Latin Diocese of Neyyattinkara (നെയ്യാറ്റിൻകര ലത്തീൻ രൂപത)",
+  logo: "/logo.png",
   address: "Neduvila, Kerala, India - 688531",
   coordinates: {
     lat: 8.340649,
@@ -25,3 +26,4 @@ export const CHURCH_CONFIG = {
     email: "parish@stfrancisneduvila.org",
   },
 };
+

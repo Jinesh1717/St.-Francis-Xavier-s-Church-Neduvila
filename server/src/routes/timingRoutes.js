@@ -6,3 +6,4 @@ const { getTimings } = require('../controllers/prayerController');
 router.get('/', getTimings);
 
 module.exports = router;
+

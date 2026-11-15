@@ -6,3 +6,4 @@ const { getPrayers } = require('../controllers/prayerController');
 router.get('/', getPrayers);
 
 module.exports = router;
+

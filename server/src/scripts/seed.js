@@ -39,11 +39,11 @@ const seedData = async () => {
     await Setting.create({
       churchName: "St. Francis Xavier's Church, Neduvila",
       churchNameMalayalam: "വിശുദ്ധ ഫ്രാൻസിസ് സേവ്യർ ദൈവാലയം, നെടുവില",
-      address: "Neduvila, Alappuzha - Changanassery Road, Kerala, India - 688531",
+      address: "Neduvila, Latin Diocese of Neyyattinkara, Kerala, India - 688531",
       phone: "+91 94470 23456 / 0477 2289123",
       email: "parish@stfrancisneduvila.org",
-      historyText: "Founded in the heart of Kerala, St. Francis Xavier's Church, Neduvila has served as a sanctuary of deep spiritual devotion and active communal fellowship for generations. Inspired by the zeal of our patron, the great Jesuit apostle of the East, St. Francis Xavier, the parish continues its vibrant ministry of faith, youth formation, and compassionate care for the vulnerable.",
-      historyTextMalayalam: "കേരളത്തിന്റെ മനോഹരമായ നെൽപ്പാടങ്ങൾക്കും കായലുകൾക്കും നടുവിൽ സ്ഥിതി ചെയ്യുന്ന നെടുവില വിശുദ്ധ ഫ്രാൻസിസ് സേവ്യർ ദൈവാലയം തലമുറകളായി വിശ്വാസത്തിന്റെ പവിത്ര കേന്ദ്രമാണ്. ഭാരതത്തിന്റെ അപ്പസ്തോലനായ വിശുദ്ധ ഫ്രാൻസിസ് സേവ്യറിന്റെ മാതൃകയിൽ സ്ഥാപിതമായ ഈ ഇടവക പ്രാർത്ഥനയിലും അഗതികൾക്കായുള്ള ജീവകാരുണ്യ പ്രവർത്തനങ്ങളിലും മുൻപന്തിയിൽ നിൽക്കുന്നു.",
+      historyText: "Founded in the heart of Kerala under the Latin Diocese of Neyyattinkara, St. Francis Xavier's Church, Neduvila has served as a sanctuary of deep spiritual devotion and active communal fellowship for generations. Inspired by the zeal of our patron, the great Jesuit apostle of the East, St. Francis Xavier, the parish continues its vibrant ministry of faith, youth formation, and compassionate care for the vulnerable.",
+      historyTextMalayalam: "നെയ്യാറ്റിൻകര ലത്തീൻ രൂപതയുടെ കീഴിൽ സ്ഥിതി ചെയ്യുന്ന നെടുവില വിശുദ്ധ ഫ്രാൻസിസ് സേവ്യർ ദൈവാലയം തലമുറകളായി വിശ്വാസത്തിന്റെ പവിത്ര കേന്ദ്രമാണ്. ഭാരതത്തിന്റെ അപ്പസ്തോലനായ വിശുദ്ധ ഫ്രാൻസിസ് സേവ്യറിന്റെ മാതൃകയിൽ സ്ഥാപിതമായ ഈ ഇടവക പ്രാർത്ഥനയിലും അഗതികൾക്കായുള്ള ജീവകാരുണ്യ പ്രവർത്തനങ്ങളിലും മുൻപന്തിയിൽ നിൽക്കുന്നു.",
       massTimings: [
         { day: "Sunday (ഞായർ)", time: "06:30 AM & 09:30 AM", description: "വിശുദ്ധ കുർബാന & വചനസന്ദേശം (Solemn Mass)" },
         { day: "Monday to Thursday (തിങ്കൾ - വ്യാഴം)", time: "06:30 AM", description: "വിശുദ്ധ കുർബാന (Morning Mass)" },
@@ -58,22 +58,22 @@ const seedData = async () => {
     await Event.deleteMany({});
     const now = new Date();
 
-    const upcomingDate1 = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days from now
-    const upcomingDate2 = new Date(now.getTime() + 18 * 24 * 60 * 60 * 1000); // 18 days
-    const upcomingDate3 = new Date(now.getTime() + 25 * 24 * 60 * 60 * 1000); // 25 days
+    const upcomingDate1 = new Date(now.getTime() + 32 * 24 * 60 * 60 * 1000); // 32 days from now (as on feast poster)
+    const upcomingDate2 = new Date(now.getTime() + 45 * 24 * 60 * 60 * 1000); // 45 days
+    const upcomingDate3 = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000); // 60 days
     const pastDate1 = new Date(now.getTime() - 15 * 24 * 60 * 60 * 1000); // 15 days ago
     const pastDate2 = new Date(now.getTime() - 40 * 24 * 60 * 60 * 1000); // 40 days ago
 
     await Event.insertMany([
       {
-        title: "Annual Parish Feast of St. Francis Xavier (തിരുനാൾ മഹോത്സവം)",
+        title: "Annual Parish Feast of St. Francis Xavier (ഇടവക തിരുനാൾ മഹോത്സവം)",
         date: upcomingDate1,
         time: "09:30 AM - 01:30 PM",
-        venue: "Main Church & Parish Hall, Neduvila",
-        description: "Solemn celebration of the patron saint St. Francis Xavier with Pontifical Concelebrated High Mass, traditional church procession (പ്രദക്ഷിണം), and fraternal fellowship meal (സ്നേഹവിരുന്ന്) for all parishioners and guests.",
+        venue: "St. Francis Xavier's Church, Neduvila (നെയ്യാറ്റിൻകര ലത്തീൻ രൂപത)",
+        description: "സെന്റ് ഫ്രാൻസിസ് സേവ്യർ ചർച്ച് നെടുവില ഇടവക തിരുനാൾ മഹോത്സവം (നെയ്യാറ്റിൻകര ലത്തീൻ രൂപത). കൊടിയേറ്റ്, ആഘോഷമായ തിരുനാൾ പാട്ടുകുർബാന, വചനസന്ദേശം, പ്രസുദേന്തി വാഴ്ച, ഭക്തിസാന്ദ്രമായ പ്രദക്ഷിണം, സ്നേഹവിരുന്ന് എന്നിവയോടെ സമുചിതമായി ആഘോഷിക്കുന്നു. ഏവർക്കും ഹൃദ്യമായ സ്വാഗതം!",
         posterImage: {
-          url: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80",
-          public_id: "seed_feast_poster",
+          url: "/images/events/parish_feast_poster.jpg",
+          public_id: "parish_feast_poster_seed",
         },
       },
       {

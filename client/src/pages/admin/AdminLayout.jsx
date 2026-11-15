@@ -83,8 +83,12 @@ const AdminLayout = () => {
           <div className="p-6 border-b border-cream-200">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <div className="w-9 h-9 rounded-full bg-skyblue-100 flex items-center justify-center text-gold-600 font-bold border border-gold-200 shadow-2xs">
-                  ✝
+                <div className="w-10 h-10 rounded-full p-0.5 bg-white border border-gold-300 shadow-2xs overflow-hidden shrink-0">
+                  <img
+                    src="/logo.png"
+                    alt="Logo"
+                    className="w-full h-full rounded-full object-cover"
+                  />
                 </div>
                 <div>
                   <h2 className="font-heading font-bold text-sm text-slate-900 leading-tight">
