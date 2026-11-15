@@ -1,0 +1,14 @@
+{
+  "name": "st-francis-xavier-church-neduvila",
+  "version": "1.0.0",
+  "description": "Production-ready website for St. Francis Xavier's Church, Neduvila (Kerala, India)",
+  "scripts": {
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "seed": "npm --prefix server run seed:admin",
+    "test": "npm --prefix server test",
+    "build": "npm --prefix client run build"
+  }
+}
+

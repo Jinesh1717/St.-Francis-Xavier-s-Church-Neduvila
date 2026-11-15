@@ -1,0 +1,34 @@
+# Node dependencies
+node_modules/
+.npm-cache/
+
+# Environment files - strictly ignored
+.env
+.env.*
+**/.env
+**/.env.*
+!**/.env.example
+!*.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Production build
+dist/
+build/
+
+# Uploaded files
+server/public/uploads/*
+!server/public/uploads/.gitkeep
+
+# Local verification & scratch files
+verify_live.js
+*.local
+
+# OS generated files
+.DS_Store
+Thumbs.db
