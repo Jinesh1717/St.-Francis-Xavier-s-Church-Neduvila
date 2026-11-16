@@ -32,3 +32,6 @@ verify_live.js
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Vercel
+.vercel/

@@ -39,7 +39,7 @@ app.use(
         fontSrc: ["'self'", 'https://fonts.gstatic.com'],
         imgSrc: ["'self'", 'data:', 'https://res.cloudinary.com', 'https://*.cloudinary.com', 'https://images.unsplash.com', 'blob:'],
         frameSrc: ["'self'", 'https://www.google.com', 'https://maps.google.com'],
-        connectSrc: ["'self'", process.env.FRONTEND_URL || 'http://localhost:5173'],
+        connectSrc: ["'self'", 'https://*.vercel.app', process.env.FRONTEND_URL || 'http://localhost:5173'],
       },
     },
     crossOriginEmbedderPolicy: false,
@@ -47,17 +47,28 @@ app.use(
   })
 );
 
-// CORS configuration: strictly restricted to frontend origin with credentials
+// CORS configuration: allow frontend origin (localhost, Vercel deployments, custom domain)
 const allowedOrigin = process.env.FRONTEND_URL || 'http://localhost:5173';
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (like mobile apps, curl, or same-origin server-to-server) in dev
-      if (!origin || origin === allowedOrigin) {
-        callback(null, true);
-      } else {
-        callback(new Error(`CORS blocked for origin: ${origin}`));
+      // Allow requests with no origin (like mobile apps, curl, or same-origin requests)
+      if (!origin) return callback(null, true);
+
+      // Check against configured frontend URL
+      if (origin === allowedOrigin) return callback(null, true);
+
+      // Allow local development ports
+      if (origin.startsWith('http://localhost:') || origin.startsWith('http://127.0.0.1:')) {
+        return callback(null, true);
       }
+
+      // Allow Vercel preview & production deployments (*.vercel.app)
+      if (origin.endsWith('.vercel.app')) {
+        return callback(null, true);
+      }
+
+      callback(new Error(`CORS blocked for origin: ${origin}`));
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
